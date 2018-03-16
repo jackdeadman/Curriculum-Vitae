@@ -1,0 +1,244 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.1 (30/4/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{deedy-resume-openfont}
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\namesection{Jack}{Deadman}{
+\href{mailto:}{jdeadman1@sheffield.ac.uk}\\
+\vspace{10pt}
+A research focused student with an interest in speech and audio processing, experience in delivering high quality solutions to solve real world problems.
+}
+
+
+%\namesection{Jack}{Deadman}{ \urlstyle{same}\url{http://jackdeadman.com} \\
+%\href{mailto:}{jdeadman1@sheffield.ac.uk}
+%}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{University of Sheffield}
+\descript{MComp in Computer Science}
+\location{First Class (Hons) expected.}
+\location{Year 1: 82.1\%}
+\location{Year 2: 82.7\%}
+\location{Year 3: 83.2\%}
+\location{Year 4: 87\% (Currently)}
+\sectionsep
+
+\subsection{Sussex Downs College}
+\location{Software Development: Distinction*}
+\location{Computing: A}
+\location{Mathematics: B}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links} 
+Github:// \href{https://github.com/jackdeadman}{\custombold{jackdeadman}} \\
+LinkedIn://  \href{https://www.linkedin.com/in/jack-deadman-19101297}{\custombold{jackdeadman}} \\
+Twitter://  \href{https://twitter.com/jackdeadman96}{\custombold{@jackdeadman96}} \\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Projects}
+\subsection{University}
+- Sound Event Detection\\
+- Open GL 3D Graphics Scene\\
+- Genesys\\
+- Software Hut
+\sectionsep
+\subsection{Side Projects}
+- Natural Deduction tool\\
+- Quad (Custom Linux login screen)\\
+- Chat client with \LaTeX \ support\\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming}
+\location{Skilled:}
+Java \textbullet{} JavaScript \textbullet{} Ruby\\
+Rails \textbullet{} Python \textbullet{} Numpy\\
+CSS \textbullet{} Sass \textbullet{} \LaTeX\ \\ 
+PHP \textbullet{} React  \textbullet{} Node \\
+\location{Familiar:}
+Bash \textbullet{} Haskell \textbullet{} Prolog \textbullet{} C
+\sectionsep
+
+\subsection{Non-Technical}
+- Teaching\\
+- Presenting\\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+
+\runsubsection{University of Sheffield}
+\descript{| Researcher }
+\location{June 2017 – July 2017}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Worked in the Testing and Security research group under the supervision of Dr. Achim Brucker developing analysis tools to detect malicious browser extensions.
+\item Successfully deployed the software on around 60,000 browser extensions using the Univesity's high performance computing facility. 
+\item Successfully finished an academic paper reporting our results.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Visual Wind}
+\descript{| Software Engineer }
+\location{June 2016 – Sep 2016}
+\begin{tightemize}
+\item Worked as part of a small team of people to produce visualisation software for wind turbines.
+\item Introduced agile methodologies into the company.
+\item Produced a proof of concept application which successfully aided a joint venture secure funding.
+\end{tightemize}
+\sectionsep
+
+
+\runsubsection{University of Sheffield}
+\descript{| Student Ambassador}
+\location{December 2015 – Present}
+\begin{tightemize}
+\item Introduce prospective students to the University on open days and assist lecturers during outreach events.
+\item Regularly give a 15 minute presentation to a group of around 15 students explaining what University life is like and answer queries they have.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{University of Sheffield}
+\descript{| Student Teaching Assistant}
+\location{September 2016 – Present}
+\begin{tightemize}
+\item Assist in teaching undergraduate lab sessions for the Java and the Web technology modules.
+\item Invigilated assessments for the Web module
+\end{tightemize}
+\sectionsep
+
+\runsubsection{University of Sheffield}
+\descript{| Support Worker}
+\location{September 2017 – Present}
+\begin{tightemize}
+\item Take lecture notes for a visually impaired individual as well as assist their learning by explaining visual concepts and mathematical equations.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{University of Sheffield}
+\descript{| Mentor}
+\location{September 2016 – Present}
+\begin{tightemize}
+\item Successfully helped 6 individuals settle in with University life whilst being a welfare mentor.
+\item Successfully helped 2 individuals with programming difficulties whist being a programming mentor as part of the Computer Science society.
+\end{tightemize}
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Awards} 
+\begin{tabular}{rll}
+2018	     & Full Ph.D scholarship (£60,000) & EPSRC\\
+2017	     & Summer Research Scholarship (£3,000) & EPSRC\\
+2017	     & Highly Commended paper in Computer Science & The Undergraduate awards\\
+2016	     & Winning team in "Software Hut" module  & Prize chosen by client \\
+\end{tabular}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SOCIETIES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
