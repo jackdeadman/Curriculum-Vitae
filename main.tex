@@ -15,16 +15,16 @@
 % default. If you get compilation errors saying a font is missing, find the line
 % on which the font is used and either change it to a font included with your
 % operating system or comment the line out to use the default font.
-% 
+%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 
+%
 % TODO:
 % 1. Integrate biber/bibtex for article citation under publications.
 % 2. Figure out a smoother way for the document to flow onto the next page.
 % 3. Add styling information for a "Projects/Hacks" section.
 % 4. Add location/address information
 % 5. Merge OpenFont and MacFonts as a single sty with options.
-% 
+%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % CHANGELOG:
@@ -46,6 +46,7 @@
 
 \documentclass[]{deedy-resume-openfont}
 
+\usepackage{enumitem}
 
 \begin{document}
 
@@ -62,14 +63,20 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\namesection{Jack}{Deadman}{
-\href{mailto:}{jdeadman1@sheffield.ac.uk}\\
-\vspace{10pt}
-A research focused student with an interest in speech and audio processing, experience in delivering high quality solutions to solve real world problems.
+\namesection{}{Jack Deadman}{
+%\href{mailto:}{jackdeadman1@gmail.ac.uk}
+Award winning graduate with experience in working in teams to deliver high quality software to solve real world problems.
+
+}
+
+\vspace{0pt}{
+
+%A research focused student with an interest in speech and audio processing, experience in delivering high quality solutions to solve real world problems.
+%Award winning graduate with experience in working in teams to deliver high quality software to solve real world challenges.
 }
 
 
-%\namesection{Jack}{Deadman}{ \urlstyle{same}\url{http://jackdeadman.com} \\
+%\namesection{Jack}{Deadman}{ \urlstyle{same}\url{http://jackdeadman.com}}
 %\href{mailto:}{jdeadman1@sheffield.ac.uk}
 %}
 
@@ -79,13 +86,13 @@ A research focused student with an interest in speech and audio processing, expe
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{minipage}[t]{0.33\textwidth} 
+\begin{minipage}[t]{0.33\textwidth}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     EDUCATION
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Education} 
+\section{Education}
 
 \subsection{University of Sheffield}
 \descript{MComp in Computer Science}
@@ -102,11 +109,15 @@ A research focused student with an interest in speech and audio processing, expe
 \location{Mathematics: B}
 \sectionsep
 
+\subsection{Bishop Bell School}
+\location{11 GCSEs A*-C including Maths and English.}
+\sectionsep
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     LINKS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Links} 
+\section{Links}
 Github:// \href{https://github.com/jackdeadman}{\custombold{jackdeadman}} \\
 LinkedIn://  \href{https://www.linkedin.com/in/jack-deadman-19101297}{\custombold{jackdeadman}} \\
 Twitter://  \href{https://twitter.com/jackdeadman96}{\custombold{@jackdeadman96}} \\
@@ -118,15 +129,14 @@ Twitter://  \href{https://twitter.com/jackdeadman96}{\custombold{@jackdeadman96}
 
 \section{Projects}
 \subsection{University}
-- Sound Event Detection\\
-- Open GL 3D Graphics Scene\\
-- Genesys\\
-- Software Hut
+Sound Event Detection\\
+Open GL 3D Graphics Scene\\
+Genesys and Software Hut \textit{(Software Engineering modules with real client)}
 \sectionsep
 \subsection{Side Projects}
-- Natural Deduction tool\\
-- Quad (Custom Linux login screen)\\
-- Chat client with \LaTeX \ support\\
+Natural Deduction tool\\
+Quad (Custom Linux login screen)\\
+Chat client with \LaTeX \ support\\
 \sectionsep
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -138,15 +148,15 @@ Twitter://  \href{https://twitter.com/jackdeadman96}{\custombold{@jackdeadman96}
 \location{Skilled:}
 Java \textbullet{} JavaScript \textbullet{} Ruby\\
 Rails \textbullet{} Python \textbullet{} Numpy\\
-CSS \textbullet{} Sass \textbullet{} \LaTeX\ \\ 
+CSS \textbullet{} Sass \textbullet{} \LaTeX\ \\
 PHP \textbullet{} React  \textbullet{} Node \\
 \location{Familiar:}
 Bash \textbullet{} Haskell \textbullet{} Prolog \textbullet{} C
 \sectionsep
 
 \subsection{Non-Technical}
-- Teaching\\
-- Presenting\\
+Teaching\\
+Presenting\\
 \sectionsep
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -155,9 +165,9 @@ Bash \textbullet{} Haskell \textbullet{} Prolog \textbullet{} C
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\end{minipage} 
+\end{minipage}
 \hfill
-\begin{minipage}[t]{0.66\textwidth} 
+\begin{minipage}[t]{0.66\textwidth}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     EXPERIENCE
@@ -166,60 +176,72 @@ Bash \textbullet{} Haskell \textbullet{} Prolog \textbullet{} C
 \section{Experience}
 
 \runsubsection{University of Sheffield}
-\descript{| Researcher }
+\descript{| Postgraduate Researcher }
+\location{September 2018 – Present}
+
+%\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{enumerate}[leftmargin=0.4cm, itemsep=-0.3ex, topsep=0pt]
+\item[--] Working in the Speech and Hearing group under the supervision of Prof. Jon Barker researching applying video information to inform beamforming algorithms for pre-processing in automatic speech recognition.
+\end{enumerate}
+\sectionsep
+
+\runsubsection{University of Sheffield}
+\descript{| Summer Research Intern }
 \location{June 2017 – July 2017}
-\vspace{\topsep} % Hacky fix for awkward extra vertical space
-\begin{tightemize}
-\item Worked in the Testing and Security research group under the supervision of Dr. Achim Brucker developing analysis tools to detect malicious browser extensions.
-\item Successfully deployed the software on around 60,000 browser extensions using the Univesity's high performance computing facility. 
-\item Successfully finished an academic paper reporting our results.
-\end{tightemize}
+
+\begin{enumerate}[leftmargin=0.4cm, itemsep=-0.3ex, topsep=0pt]
+\item[--] Worked in the Testing and Security research group under the supervision of Dr. Achim Brucker developing analysis tools to detect malicious browser extensions.
+\item[--] Successfully deployed the software on around 60,000 browser extensions using the Univesity's high performance computing facility.
+\item[--] Successfully finished an academic paper reporting our results.
+\end{enumerate}
 \sectionsep
 
 \runsubsection{Visual Wind}
 \descript{| Software Engineer }
 \location{June 2016 – Sep 2016}
-\begin{tightemize}
-\item Worked as part of a small team of people to produce visualisation software for wind turbines.
-\item Introduced agile methodologies into the company.
-\item Produced a proof of concept application which successfully aided a joint venture secure funding.
-\end{tightemize}
+\begin{enumerate}[leftmargin=0.4cm, itemsep=-0.3ex, topsep=0pt]
+\item[--] Worked as part of a small team of people to produce visualisation software for wind turbines.
+\item[--] Introduced agile methodologies into the company.
+\item[--] Produced a proof of concept application which successfully aided a joint venture secure funding.
+\end{enumerate}
 \sectionsep
 
 
 \runsubsection{University of Sheffield}
 \descript{| Student Ambassador}
-\location{December 2015 – Present}
-\begin{tightemize}
-\item Introduce prospective students to the University on open days and assist lecturers during outreach events.
-\item Regularly give a 15 minute presentation to a group of around 15 students explaining what University life is like and answer queries they have.
-\end{tightemize}
+\location{December 2015 – June 2018}
+\begin{enumerate}[leftmargin=0.4cm, itemsep=-0.3ex, topsep=0pt]
+%\item[--] Introduce prospective students to the University on open days and assist lecturers during outreach events.
+\item[--] Regularly gave a 15 minute presentation to a group of around 15 students explaining what University life is like and answered queries they have.
+\end{enumerate}
 \sectionsep
 
 \runsubsection{University of Sheffield}
 \descript{| Student Teaching Assistant}
 \location{September 2016 – Present}
-\begin{tightemize}
-\item Assist in teaching undergraduate lab sessions for the Java and the Web technology modules.
-\item Invigilated assessments for the Web module
-\end{tightemize}
+\begin{enumerate}[leftmargin=0.4cm, itemsep=-0.3ex, topsep=0pt]
+\item[--] Assist in teaching undergraduate lab sessions.
+\item[--] Invigilate assessments.
+\item[--] Mark undergraduate assignments.
+\end{enumerate}
 \sectionsep
 
 \runsubsection{University of Sheffield}
 \descript{| Support Worker}
 \location{September 2017 – Present}
-\begin{tightemize}
-\item Take lecture notes for a visually impaired individual as well as assist their learning by explaining visual concepts and mathematical equations.
-\end{tightemize}
+\begin{enumerate}[leftmargin=0.4cm, itemsep=-0.3ex, topsep=0pt]
+\item[--] Take lecture notes for a visually impaired individual as well as assist their learning by explaining visual concepts and mathematical equations.
+\end{enumerate}
 \sectionsep
 
 \runsubsection{University of Sheffield}
 \descript{| Mentor}
-\location{September 2016 – Present}
-\begin{tightemize}
-\item Successfully helped 6 individuals settle in with University life whilst being a welfare mentor.
-\item Successfully helped 2 individuals with programming difficulties whist being a programming mentor as part of the Computer Science society.
-\end{tightemize}
+\location{September 2016 – June 2018}
+\begin{enumerate}[lefftmargin=0.4cm, itemsep=-0.3ex, topsep=0pt]
+\item[--] As a welfare mentor I helped students settle into University as they transition into a new environment. As a programming mentor I helped student settle in to Univesity academically.
+%\item[--] Successfully helped 6 individuals settle in with University life whilst being a welfare mentor.
+%\item[--] Successfully helped 2 individuals with programming difficulties whist being a programming mentor as part of the Computer Science society.
+\end{enumerate}
 \sectionsep
 
 
@@ -227,7 +249,7 @@ Bash \textbullet{} Haskell \textbullet{} Prolog \textbullet{} C
 %     AWARDS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Awards} 
+\section{Awards}
 \begin{tabular}{rll}
 2018	     & Full Ph.D scholarship & EPSRC\\
 2018	     & Mappin Medal & University of Sheffield\\
@@ -241,5 +263,5 @@ Bash \textbullet{} Haskell \textbullet{} Prolog \textbullet{} C
 %     SOCIETIES
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\end{minipage} 
+\end{minipage}
 \end{document}  \documentclass[]{article}
